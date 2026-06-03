@@ -30,7 +30,8 @@ No medical data is or should be included in this repository. The provided code c
    - Output: Folder containing performance results for different RadiomiX model combinations. This includes averaged AUC, accuracy and F1 scores as well as best performing parameters.
    Note: RadiomiX scripts were edited to account for this dataset and reduced computation costs. 
 
-Extra scripts: 
+Extra scripts:
+ 
   **Seperate segmentation stage**
    - Script: `MuscleMap_segmentation.py`
    - Input: Image with correct format. 
