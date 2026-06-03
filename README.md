@@ -1,6 +1,6 @@
 Skeletal Muscle Radiomics Worklow - Code Implementation
 
-This repository contains the core scripts used to run the radiomics workflow for distinguishing children diagnosed with cerebral palsy from typically developing children. This includes feature extraction using PyRadiomics, a feature selection and ranking pipeline, a statistical analysis using a Mann-Whitney U test, and classification using RadiomiX. An additional script demonstrating how MuscleMap segmentation can be performed is also included. The goal is to allow easy reproducibility and future radiomic analysis using a similar workflow. 
+This repository contains the core scripts used to run the radiomics workflow for distinguishing children diagnosed with cerebral palsy from typically developing children. This includes feature extraction using PyRadiomics, a feature selection and ranking pipeline, a statistical analysis using a Mann-Whitney U test, and classification using RadiomiX. Additional scripts demonstrating how MuscleMap segmentation can be performed and adjustments used in the RadiomiX framework are also included. The goal is to allow easy reproducibility and future radiomic analysis using a similar workflow. 
 
 No medical data is or should be included in this repository. The provided code can be implemented on medical data of different types but may have to be altered depending on data format.
 
@@ -31,15 +31,15 @@ No medical data is or should be included in this repository. The provided code c
    Note: RadiomiX scripts were edited to account for this dataset and reduced computation costs. 
 
 Extra scripts:
- 
+
   **Seperate segmentation stage**
    - Script: `MuscleMap_segmentation.py`
    - Input: Image with correct format. 
    - Output: Generated segmentation mask corresponding to input image. 
 
-  **Custom RadiomiX workflow**
+  **Custom RadiomiX framework**
    - Script: `radiomix_edit.py`
-   - Note: RadiomiX workflow adjusted to account for data used in this study. Use instead of radiomix.py inside of RadiomiX folder.
+   - Note: RadiomiX framework adjusted to account for data used in this study. Use instead of radiomix.py inside of RadiomiX folder.
 
   **Custom parameter combination**
    - Script: `custom_params.json`
@@ -51,7 +51,7 @@ Extra scripts:
 
 This code currently uses script level configuration blocks, (constants at the top of each script). Make sure all file paths and inputs are correct before running.
 
-The workflow requires the installation of PyRadiomics, RadiomiX, and MuscleMap. These packages are open source and publically availabel to download from GitHub.
+The workflow requires the installation of PyRadiomics, RadiomiX, and MuscleMap. These packages are open source and publically available to download from GitHub.
 
 1: Make sure to have images and segmented masks with the same spatial geometry so that PyRadiomics can extract features in 01.
 2: Use 01 framework, expand to loop across subjects and save to CSV files for individual cases such as one subject group and muscle. 
