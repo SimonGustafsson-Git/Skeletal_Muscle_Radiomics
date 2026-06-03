@@ -51,7 +51,7 @@ Extra scripts:
 
 This code currently uses script level configuration blocks, (constants at the top of each script). Make sure all file paths and inputs are correct before running.
 
-The workflow requires the installation of PyRadiomics, RadiomiX, and MuscleMap. These packages are open source and publically available to download from GitHub.
+The workflow requires the installation of PyRadiomics, RadiomiX, and MuscleMap. These packages are open source and publicly available to download from GitHub, and should be run from separate Python environments. Additional requirments for scripts 01-03 are Python 3.9+, SimpleITK, NumPy, pandas, SciPy, scikit-learn, matplotlib, and additional dependencies that should be installed together with RadiomiX.
 
 1: Make sure to have images and segmented masks with the same spatial geometry so that PyRadiomics can extract features in 01.
 2: Use 01 framework, expand to loop across subjects and save to CSV files for individual cases such as one subject group and muscle. 
