@@ -1,0 +1,51 @@
+{
+  "selector_configs": {
+    "RF10": [["RF", 10]]
+  },
+
+  "classifiers": {
+    "RF": {
+      "classifier__n_estimators": [50, 100],
+      "classifier__max_features": ["sqrt"],
+      "classifier__max_depth": [10, null],
+      "classifier__min_samples_leaf": [1, 2, 4]
+    },
+
+    "LR": {
+      "classifier__C": [0.01, 0.1, 1, 10],
+      "classifier__penalty": ["l2"],
+      "classifier__solver": ["lbfgs"],
+      "classifier__max_iter": [10000],
+      "scaler__scaler_type": ["Standard", "MinMax", "None"]
+    },
+
+    "ADABoost": {
+      "classifier__n_estimators": [50, 100],
+      "classifier__learning_rate": [0.1, 1],
+      "scaler__scaler_type": ["Standard", "MinMax", "None"]
+    },
+    
+    "XGBoost": {
+      "classifier__learning_rate": [0.05, 0.1],
+      "classifier__max_depth": [2, 4], 
+      "classifier__n_estimators": [50, 100],
+      "classifier__subsample": [1],
+      "scaler__scaler_type": ["Standard", "MinMax", "None"]
+    },
+
+    "SVM": {
+      "classifier__kernel": ["linear"],
+      "classifier__C": [0.1, 1, 10],
+      "classifier__gamma": ["scale", 0.1],
+      "scaler__scaler_type": ["Standard", "MinMax", "None"]
+    },
+
+    "KNN": {
+      "classifier__n_neighbors": [3, 5, 7],
+      "classifier__weights": ["uniform", "distance"],
+      "classifier__p": [1],
+      "classifier__algorithm": ["auto"],
+      "scaler__scaler_type": ["Standard", "MinMax", "None"]
+    }}
+}
+
